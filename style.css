@@ -181,3 +181,49 @@ footer .btn {
     gap: 1rem;
   }
 }
+
+/* HEADER NAVIGATION REPOSITION */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    width: 100%;
+    order: 2;
+  }
+  header h1 {
+    order: 1;
+  }
+  nav ul {
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* FIX: Ensure nav items stay horizontal on all screens */
+nav ul {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
