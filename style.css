@@ -1,0 +1,183 @@
+
+/* Reset e Variáveis Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --cor-primaria: #004c66;
+  --cor-secundaria: #fca311;
+  --cor-fundo: #f9f9f9;
+  --cor-texto: #333;
+  --fonte-principal: 'Inter', sans-serif;
+}
+body {
+  font-family: var(--fonte-principal);
+  background-color: var #333;
+  color: var(--cor-texto);
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: var(--cor-secundaria);
+}
+.section {
+  padding: 1rem 0;
+  margin-top: 5rem;
+}
+.apresentacao .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.apresentacao .texto {
+  flex: 1;
+  min-width: 300px;
+}
+.apresentacao .foto img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  background: var(--cor-secundaria);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #e08e00;
+}
+.sobre p {
+  max-width: 700px;
+  line-height: 1.6;
+}
+.projetos .cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+.card {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+}
+.card img {
+  width: 500px;
+  border-radius: 10px;
+}
+.card div {
+  flex: 1;
+}
+.grafico label {
+  display: block;
+  margin: 1rem 0 0.25rem;
+  font-weight: bold;
+}
+.barra {
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.barra div {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: right;
+}
+.experiencia ul,
+.educacao ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+.experiencia li,
+.educacao li {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.experiencia strong,
+.educacao strong {
+  color: var(--cor-primaria);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+form input,
+form textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: var(--fonte-principal);
+}
+footer {
+  background: var(--cor-primaria);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+footer .btn {
+  background: white;
+  color: var(--cor-primaria);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .apresentacao .container,
+  .projetos .cards,
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
